@@ -2,15 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_URPWater_Demo_Dual
   m_Shader: {fileID: 4800000, guid: 206e4b0fd7976c742b851eef70622872, type: 3}
-  m_ShaderKeywords: _CAUSTICSMODE_2D _COLORMODE_COLORS _DISPLACEMENTMODE_OFF _FOAM_RIPPLE_ON
-    _NORMALSMODE_DUAL _REFLECTIONMODE_PROBES
+  m_ValidKeywords:
+  - _CAUSTICSMODE_2D
+  - _COLORMODE_COLORS
+  - _DISPLACEMENTMODE_GERSTNER
+  - _DYNAMIC_EFFECTS_ON
+  - _FOAM_ON
+  - _FOAM_RIPPLE_ON
+  - _FOAM_WHITECAPS_ON
+  - _NORMALSMODE_DUAL
+  - _REFLECTIONMODE_PROBES
+  - _SCATTERING_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -112,6 +122,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - BOOLEAN_FB194AC780E943B8B8264B11BC92FB70: 0
     - _AddFoam: 0
@@ -145,12 +156,12 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DispMask: 0
-    - _DisplacementMode: 0
+    - _DisplacementMode: 1
     - _Distortion: 32
     - _DoubleSided: 0
     - _DstBlend: 0
     - _DynamicDisplacement: 1
-    - _DynamicEffects: 0
+    - _DynamicEffects: 1
     - _DynamicFoam: 1
     - _DynamicNormal: 1
     - _EdgeFade: 0
@@ -158,18 +169,18 @@ Material:
     - _EnvironmentReflections: 1
     - _FlowIntensity: 0.12
     - _FlowSpeed: 10
-    - _Foam: 0
+    - _Foam: 1
     - _FoamCapsIntensity: 1
-    - _FoamCapsRangeMax: 1
-    - _FoamCapsRangeMin: 0
-    - _FoamDistortion: 0
-    - _FoamRippleDistance: 0.31
-    - _FoamRippleSize: 1.46
-    - _FoamRippleSpeed: -1
+    - _FoamCapsRangeMax: 2
+    - _FoamCapsRangeMin: 0.9444544
+    - _FoamDistortion: 0.5
+    - _FoamRippleDistance: 3.53
+    - _FoamRippleSize: 6.37
+    - _FoamRippleSpeed: 0.1
     - _FoamRipples: 1
-    - _FoamSize: 0.1
-    - _FoamWhiteCaps: 0
-    - _GerstnerSpeedA: 1
+    - _FoamSize: 0.01
+    - _FoamWhiteCaps: 1
+    - _GerstnerSpeedA: 0.8
     - _GerstnerSpeedB: 1
     - _GerstnerSpeedC: 1
     - _GerstnerSpeedD: 1
@@ -179,7 +190,7 @@ Material:
     - _Metallic: 0
     - _NormalFar: 0
     - _NormalFarDistance: 100
-    - _NormalMapAIntensity: 0.395
+    - _NormalMapAIntensity: 1
     - _NormalMapBIntensity: 1
     - _NormalMapFarIntensity: 1
     - _NormalsMode: 1
@@ -194,11 +205,11 @@ Material:
     - _ReflectionIntensity: 1
     - _ReflectionMode: 2
     - _ReflectionRoughness: 0.1
-    - _Scattering: 0
+    - _Scattering: 1
     - _ScatteringIntensity: 1
     - _ScatteringRangeMax: 2
     - _ScatteringRangeMin: 0.4131296
-    - _Smoothness: 0.675
+    - _Smoothness: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpeedMul: 0
@@ -218,20 +229,20 @@ Material:
     - _CausticsSpeed: {r: 1, g: 1, b: -0.2, a: -0.33}
     - _CausticsSpeed3D: {r: 1, g: 1, b: 1, a: 1}
     - _CausticsTiling: {r: 0.2, g: 0.2, b: 0.1, a: 0.1}
-    - _Color: {r: 0.25490195, g: 0.98039216, b: 0.6740629, a: 1}
-    - _DepthColor: {r: 0, g: 0.25999996, b: 0.39999998, a: 1}
+    - _Color: {r: 0.4117647, g: 0.58431375, b: 0.5751181, a: 1}
+    - _DepthColor: {r: 0.32156864, g: 0.2813505, b: 0.11372548, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FoamTiling: {r: 1, g: 1, b: 1, a: 1}
-    - _GerstnerWaveA: {r: 0.84712195, g: -0.53139853, b: 0.66, a: 6.55}
+    - _FoamTiling: {r: 10, g: 10, b: 1, a: 1}
+    - _GerstnerWaveA: {r: 0.9612617, g: 0.27563736, b: 4, a: 5}
     - _GerstnerWaveB: {r: 0, g: 1, b: 0.05, a: 4}
     - _GerstnerWaveC: {r: 1, g: 0, b: 0.05, a: 4}
     - _GerstnerWaveD: {r: 1, g: 0, b: 0.05, a: 4}
-    - _NormalMapASpeeds: {r: 0.2, g: 0.2, b: -0.33, a: -0.4}
-    - _NormalMapATilings: {r: 2, g: 2, b: 1.5, a: 1.5}
-    - _NormalMapBSpeeds: {r: 1, g: 1, b: 1, a: 1}
-    - _NormalMapBTilings: {r: 1, g: 1, b: 1, a: 1}
+    - _NormalMapASpeeds: {r: 2.78, g: 0.2, b: -0.33, a: -0.4}
+    - _NormalMapATilings: {r: 20, g: 20, b: 15, a: 15}
+    - _NormalMapBSpeeds: {r: 0.1, g: 0.2, b: 1, a: 1}
+    - _NormalMapBTilings: {r: 10, g: 10, b: 1, a: 1}
     - _NormalMapFarSpeeds: {r: 1, g: 1, b: 1, a: 1}
     - _NormalMapFarTilings: {r: 1, g: 1, b: 0.5, a: 0.5}
     - _RefractionKey1: {r: -1, g: -1, b: -1, a: -1}
