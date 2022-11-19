@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 130000589525631026}
   - component: {fileID: 1921674761927249348}
   - component: {fileID: 2085555450056695513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sidetable_large_door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 2291102044088339758}
   - component: {fileID: 3398905139133540707}
   - component: {fileID: 1552853219089655200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sidetable_large_door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
